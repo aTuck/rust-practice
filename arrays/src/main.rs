@@ -9,5 +9,10 @@ fn main() {
     // This loop prints: 0 1 2
     for x in array.iter() {
         print!("{} ", x);
+    }   
+    println!();
+    for number in (1..4).rev() {
+        println!("{}!", number);
     }
+    println!("LIFTOFF!!!");
 }

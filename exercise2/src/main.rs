@@ -45,6 +45,7 @@ fn pythagorean(n: i32) -> Vec<(i32,i32,i32)> {
     return abc; 
 }
 
+// Wrote before discovering {:?} syntax
 fn print_i32_vec(v: Vec<i32>) {
     print!("[");
     for (i, val) in v.iter().enumerate() {
@@ -58,6 +59,7 @@ fn print_i32_vec(v: Vec<i32>) {
     println!();
 }
 
+// Wrote before discovering {:?} syntax
 fn print_tup_vec(v: Vec<(i32,i32,i32)>) {
     print!("[");
     for (i, val) in v.iter().enumerate() {
@@ -73,24 +75,11 @@ fn print_tup_vec(v: Vec<(i32,i32,i32)>) {
 
 
 fn main() {
-    print!("divisors(30): "); 
-    print_i32_vec(divisors(30));
-
-    print!("divisors(63): ");
-    print_i32_vec(divisors(63));
-
-    print!("divisors(127): ");
-    print_i32_vec(divisors(127)); 
-
-    print!("primes(7): ");
-    print_i32_vec(primes(7));
-
-    print!("primes(100): ");
-    print_i32_vec(primes(100));
-
-    print!("pythagorean(10): ");
-    print_tup_vec(pythagorean(10));
-
-    print!("pythagorean(30): ");
-    print_tup_vec(pythagorean(30));
+    println!("divisors(30): {:?}", divisors(30)); 
+    println!("divisors(63): {:?}", divisors(63));
+    println!("divisors(127): {:?}", divisors(127));
+    println!("primes(7): {:?}", primes(7));
+    println!("primes(100): {:?}", primes(100));
+    println!("pythagorean(10): {:?}", pythagorean(10));
+    print!("pythagorean(30): {:?}", pythagorean(30));
 }
